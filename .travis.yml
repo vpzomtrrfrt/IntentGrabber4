@@ -5,7 +5,6 @@ android:
     - android-25
 jdk:
   - oraclejdk8
-before_deploy: "./gradlew build"
 deploy:
   provider: releases
   api_key:
