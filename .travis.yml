@@ -3,6 +3,8 @@ android:
   components:
     - build-tools-19.1.0
     - android-22
+jdk:
+  - oraclejdk8
 before_deploy: "./gradlew build"
 deploy:
   provider: releases
