@@ -1,0 +1,13 @@
+language: java
+jdk:
+- openjdk6
+before_deploy: "./gradlew build"
+deploy:
+  provider: releases
+  api_key:
+    secure: lse7MJYX8l2m/xy/EV+I6x6Jp8lbB8hD+be9rrwRUw8d830PsoAFSlnlS1xyxvTvnQj/dwXJ4t9YgNzrcb0kD/iuRZU+Y1YxZecznY2SiA/5JTRSRszkwoT0cQYDEuKDpKCx0/qkPHsWwHUig6PTmqLC1ZnYwdlIyJz4RkCjoooJ8JZKCKzqdhW5wQP7Dgbumyip2fG/J2V6eypz5DrUB6aayRnufZQTIlKbdSJ5mGPGc8Jd/obH3kr7rOGYfM+lEi8nGCjAUYls/UM9EQPMSRKsBf7Gzz2l5fifE3Pct4o8ndZXOqMKUEtDIgxVWQ4rN7/hsGryQDZP9NffqIWspHbIAnLkJ8cCuamXjJLa7XcfMAkMQcSF5iNCrolXtz7c1QXt2dsP30g4LrgCpvkIRsJgj1ysddw+iQwBMHcgFEM4C/SV2nyGwC0Po2/yRKcMxOdxw0h6W2T6DHEWF+I+2m9JHGVlZhTMVqVNdP7jjddPgKrR+SG5ztv0PlLKUY9T8nj4SnItHtjI960FpgUPGh/uZjgqAy9VV+gPmNvU+5VwrCfr/aCQtj/a+HUdJ0yKD8zIT/K85Wn8P+NyQXeHIX38UgE2f6DaDOPCd7vsF5y9QlY6mUhm1+e5RTEv+BggoPVMZN7v5qRxIrsQ8vawT+Pub2a1r+bZT1+m3wdsgBk=
+  file: app/build/intermediates/bundles/release/classes.jar
+  on:
+    repo: vpzomtrrfrt/IntentGrabber4
+    all_branches: true
+    tags: true
